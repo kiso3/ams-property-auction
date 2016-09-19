@@ -1,0 +1,132 @@
+body {
+	background-image: url('../images/background.jpg');
+}
+
+#container {
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #F3F3F3;
+	height: auto;
+	margin-top: 30px;
+	min-height: 600px;
+}
+
+.content {
+	margin: 20px 10px 0 20px;
+	font: normal 16px/20px arial, verdana, helvetica, sans-serif;
+	text-align: center;
+}
+
+.addbutton {
+	float: left;
+	margin: 5px;
+}
+
+.check-box {
+	margin-bottom: 10px;
+	width: 240px;
+	text-align: left;
+	margin-right: 10px;
+	font-size: 18px;
+}
+
+#titlemain {
+	width: 800 px;
+	height: 75px;
+	line-height: 75px;
+	display: inline-block;
+	margin: 0 auto;
+	margin-top: 25px;
+	text-align: center;
+	font: bold 20px verdana, arial, helvetica, sans-serif;
+	color: #000000;
+	letter-spacing: 4px;
+	cursor: default;
+}
+
+#menu {
+	text-align: center;
+	background: #000;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	overflow: hidden;
+}
+
+#menu li, #menu a {
+	display: inline;
+	color: #fff;
+	text-decoration: none;
+	font: bold 16px verdana, arial, helvetica, sans-serif;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 15px;
+	margin: 0;
+}
+
+#home {
+	float: left;
+}
+
+#footer {
+	height: 30px;
+	background-color: #000;
+	color: #fff;
+	font: normal 15px/30px arial, verdana, helvetica, sans-serif;
+	color: #fff;
+	text-align: center;
+	clear: both;
+	padding: 5px;
+}
+
+#cientlist #propertyslist {
+	float: left;
+}
+
+#cientlist, #propertyslist {
+	float: left;
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+p.clienterror {
+	margin: 15px auto;
+	font-size: 14px;
+	font-weight: bold;
+	color: red;
+}
+
+label.clientlabel {
+	display: inline-block;
+	margin-bottom: 10px;
+	width: 120px;
+	text-align: left;
+	margin-right: 10px;
+	font-size: 18px;
+}
+
+checkbox.informed-with-offering {
+	display: inline-block;
+	margin-bottom: 10px;
+	width: 120px;
+	text-align: left;
+	margin-right: 10px;
+	font-size: 18px;
+}
+}
