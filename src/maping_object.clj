@@ -67,8 +67,6 @@
 		:informed-with-offering(application  :informed-with-offering)
 		:date-of-visite-offering (application  :date-of-visite-offering)
 		:deposit (application  :deposit)                                       
-		;:property-id (get-in application [:property :_id] )                    
-	  ;:client-id (get-in application [:client :_id])
    :property-id (get-in application [:property-id] )                    
    :client-id (get-in application [:client-id])
    })

@@ -10,7 +10,9 @@
         [ring.middleware.params :only [wrap-params]]
         [databasebroker :only [insert-new-property insert-new-client 
                                remove-client-by-id update-client
-                               remove-application-by-id]]
+                               remove-application-by-id
+                               get-client-by-id]]
+        [insert-test-data :onlt insert-test-data]
         [client-list :only [all-client]]
         [client-new :only [client-new-page new-client]]
         [client-edit :only [client-edit-page edit-client]]
@@ -72,84 +74,16 @@
 
  (defn start-jetty-server []
    (run-jetty #'app {:port 8081 :join? false})
-   (println "\nProperty auction application. Browse to http://localhost:8081 in your browser to get started!"))
+   (println "\nProperty auction application. Browse to http://localhost:8081 in your browser to get started!")
+   (if (nil? (get-client-by-id 1))
+     (insert-test-data)))
+  
  
- 
- (defn insert-test-data []    
-     (do
-     (insert-new-property   {			    
-                             :mark "BP-2016-01"
-                             :start-price 50000
-                             :deposit 5000
-                             :area 40                    
-                             :advertisement {
-                                             :municipality-name "Bački Petrovac"
-                                             :licitaition-step 1000
-                                             :max-area 1000
-                                             }
-                             })
-     (insert-new-property   {
-                            :mark "BP-2016-02"
-                             :start-price 60000
-                             :deposit 6000
-                             :area 50                    
-                             :advertisement {
-                                             :municipality-name "Bački Petrovac"
-                                             :licitaition-step 1000
-                                             :max-area 1000
-                                             }
-                            })
-     (insert-new-property   {			    
-                            :mark "BP-2016-03"
-                             :start-price 90000
-                             :deposit 9000
-                             :area 80                    
-                             :advertisement {
-                                             :municipality-name "Bački Petrovac"
-                                             :licitaition-step 1000
-                                             :max-area 1000
-                                             }
-                             })
-    (insert-new-client {
-                         :name "Pera"
-                         :parent-name "Petar"
-                         :lastname "Perić"
-                         :email "pera@peric.com"
-                         :phone "+38164111111"
-                         :address {
-                                  :street "Petrovića"
-                                  :number "17"
-                                  :place "Bački Petrovac"
-                                  } 
-                        })
-     (insert-new-client {
-                     :name "Miloš"
-                     :parent-name "Nikola"
-                     :lastname "Nikolić"
-                     :email "milos@email.com"
-                     :phone "+38164111112"
-                     :address {
-                              :street "Vojvođanska"
-                              :number "234"
-                              :place "Bački Petrovac"
-                              } 
-                     })
-       (insert-new-client {
-                            :name "Dušan"
-                            :parent-name "Nemanja"
-                            :lastname "Đorđević"
-                            :email "dusan@email.com"
-                            :phone "+38164111113"
-                            :address {
-                                     :street "Vojvođanska"
-                                     :number "117"
-                                     :place "Bački Petrovac"
-                                     } 
-                            })
-       ))
 
  (defn -main [& args]
    (do
      (start-jetty-server)      
  ))
+ 
+  
  

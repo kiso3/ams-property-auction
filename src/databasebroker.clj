@@ -29,9 +29,9 @@
   [client]
   (insert-entity :client (maping-client client)))
 
-(defn get-client-by-email [client]
+(defn get-client-by-email [email]
   "Find client by email."
-  (fetch-one :client :where {:email (client :email)}))
+  (fetch-one :client :where {:email email}))
 
 (defn get-client-by-id [id]
   "Find client by id."
@@ -73,6 +73,10 @@
 (defn get-property-by-id [id]
   "Find property by id."
   (fetch-one :property :where {:_id id}))
+
+(defn get-property-by-mark [mark]
+  "Find property by mark."
+  (fetch-one :property :where {:mark mark}))
 
 (defn get-all-propertys []
   "Get all property"

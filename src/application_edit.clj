@@ -119,18 +119,20 @@
                (text-field {:hidden true} :property-id (get-in (session/get :application) [:property-id]))]
               [:div               
                (text-field {:hidden true} :client-id (get-in (session/get :application) [:client-id]))]
-              [:div.check-box
+              [:div
+               (label  {:class "check-box-label"} :informed-with-offering "Informed with offering")
                (check-box  "informed-with-offering" (let [is-check (get-in (session/get :application) [:informed-with-offering])]
                                                       (if (= is-check "Yes")
                                                         true
                                                         false)) "Yes")
-               (label :informed-with-offering "Informed with offering")]
-              [:div.check-box
+               ]
+              [:div
+               (label {:class "check-box-label"} :deposit "Deposit")
                (check-box  "deposit" (let [is-check (get-in (session/get :application) [:deposit])]
                                        (if (= is-check "Yes")
                                          true
                                          false))  "Yes") 
-               (label :deposit "Deposit")]
+               ]
               [:div               
                (label {:class "clientlabel"} :date-of-visite-offering "Visite date")
                (text-field {:readonly false} :date-of-visite-offering (str (get-in (session/get :application) [:date-of-visite-offering])))]

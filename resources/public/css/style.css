@@ -23,7 +23,9 @@ body {
 	margin: 5px;
 }
 
-.check-box {
+	.check-box {
+	display: inline-block;
+	float: left;
 	margin-bottom: 10px;
 	width: 240px;
 	text-align: left;
@@ -121,12 +123,11 @@ label.clientlabel {
 	font-size: 18px;
 }
 
-checkbox.informed-with-offering {
+label.check-box-label {
 	display: inline-block;
 	margin-bottom: 10px;
-	width: 120px;
+	width: 180px;
 	text-align: left;
 	margin-right: 10px;
 	font-size: 18px;
-}
 }
