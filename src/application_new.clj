@@ -102,11 +102,12 @@
               [:div               
                (text-field {:hidden true} :client-id ((session/get :client):_id))]              
               [:div
-               (check-box  "informed-with-offering" false "1") 
-               (label :informed-with-offering "Informed with offering")]
+               (label  {:class "check-box-label"} :informed-with-offering "Informed with offering")
+               (check-box  "informed-with-offering" false "1") ]
               [:div
-               (check-box  "deposit" false "1") 
-               (label :deposit "Deposit")]
+               (label {:class "check-box-label"} :deposit "Deposit")
+               (check-box  "deposit" false "1") ]
+               
               [:div               
                (label {:class "clientlabel"} :date-of-visite-offering "Visite date")
                (text-field {:readonly false} :date-of-visite-offering (session/flash-get :date-of-visite-offering))]
